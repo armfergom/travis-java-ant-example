@@ -1,5 +1,5 @@
 <project name="HelloWorld" basedir="." default="main">
-    <!-- <property name="dir.src"     value="src"/> -->
+    <property name="dir.src"     value="src"/>
     <property name="dir.build"   value="build"/>
     <property name="dir.classes" value="${dir.build}/classes"/>
     <property name="dir.jar"     value="${dir.build}/jar"/>
@@ -12,7 +12,7 @@
 
     <target name="compile">
         <mkdir dir="${dir.classes}"/>
-        <javac srcdir="${dirSrc}" destdir="${dir.classes}"/>
+        <javac srcdir="${sir.src}" destdir="${dir.classes}"/>
     </target>
 
     <target name="jar" depends="compile">
@@ -30,4 +30,6 @@
 
     <target name="clean-build" depends="clean,jar"/>
     <target name="main" depends="clean,run"/>
+
+    <echo>Embed another:${customParameter}</echo>
 </project>
